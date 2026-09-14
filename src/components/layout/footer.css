@@ -1,0 +1,27 @@
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 1.75rem 0 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+}
+
+.site-footer-note {
+  opacity: 0.85;
+}
