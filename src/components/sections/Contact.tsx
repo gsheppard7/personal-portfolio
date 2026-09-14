@@ -16,7 +16,7 @@ export function Contact() {
       <div ref={ref} className="contact-panel glass-panel reveal">
         <div className="contact-copy">
           <p className="section-kicker" id="contact-label">
-            // contact
+            {"// contact"}
           </p>
           <h2 className="section-heading">Let&apos;s build what&apos;s next</h2>
           <p className="contact-text">

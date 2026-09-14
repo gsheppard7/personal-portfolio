@@ -8,7 +8,7 @@ export function SectionHeading({ id, title, subtitle }: SectionHeadingProps) {
   return (
     <header className="section-intro">
       <p className="section-kicker" id={`${id}-label`}>
-        // {id}
+        {`// ${id}`}
       </p>
       <h2 className="section-heading" id={`${id}-heading`}>
         {title}
