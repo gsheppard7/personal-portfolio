@@ -20,13 +20,26 @@ export function Contact() {
           </p>
           <h2 className="section-heading">Let&apos;s build what&apos;s next</h2>
           <p className="contact-text">
-            Recruiters and hiring managers: I&apos;d love to walk through my projects,
-            stack depth, and what I&apos;m looking for in my next role.
+            Recruiters and hiring managers: reach out about internships, co-ops,
+            or full-time roles in software engineering, data, or sports analytics.
+          </p>
+          <p className="contact-meta">
+            <a href={`mailto:${siteMeta.email}`}>{siteMeta.email}</a>
+            {" · "}
+            <a href={`tel:+1${siteMeta.phone.replace(/\D/g, "")}`}>{siteMeta.phone}</a>
           </p>
         </div>
         <div className="contact-actions">
           <a className="btn btn-primary" href={`mailto:${siteMeta.email}`}>
-            Email {siteMeta.name}
+            Email me
+          </a>
+          <a
+            className="btn btn-ghost"
+            href={siteMeta.links.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume (PDF)
           </a>
           <a
             className="btn btn-ghost"

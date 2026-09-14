@@ -5,6 +5,7 @@ export type Project = {
   tags: string[];
   href?: string;
   highlight?: string;
+  period?: string;
 };
 
 export type Experience = {
@@ -23,108 +24,193 @@ export type SkillGroup = {
 };
 
 export const siteMeta = {
-  name: "Chad",
-  role: "Software Engineer",
+  name: "Gavin Sheppard",
+  role: "Computer Science · Georgia Tech",
   tagline:
-    "Building interactive products with clean architecture, sharp UX, and measurable impact.",
-  location: "Open to remote & hybrid",
-  email: "chad@example.com",
+    "Data engineering and full-stack development with a focus on sports analytics, AI systems, and products that turn messy data into decisions.",
+  location: "Atlanta, GA · Cleveland, OH",
+  email: "gsheppard7@gatech.edu",
+  phone: "(440) 799-0354",
   links: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/",
-    resume: "#contact",
+    github: "https://github.com/gsheppard7",
+    linkedin: "https://www.linkedin.com/in/gavin-sheppard29/",
+    resume: "/Gavin-Sheppard-Resume.pdf",
   },
-  availability: "Available for full-time roles · Q4 2026",
+  availability: "B.S. Computer Science · Expected May 2029 · GPA 3.77",
 };
 
 export const heroStats = [
-  { label: "Years shipping", value: "5+" },
-  { label: "Projects shipped", value: "12+" },
-  { label: "Stack focus", value: "Web · UI · Systems" },
+  { label: "GPA", value: "3.77" },
+  { label: "Internships", value: "3" },
+  { label: "Focus", value: "Data · ML · Web" },
 ];
 
 export const projects: Project[] = [
   {
     id: "hivemind",
-    title: "Hivemind Platform",
+    title: "Hivemind",
     description:
-      "Multi-agent orchestration workspace with real-time collaboration, task routing, and developer tooling.",
-    tags: ["React", "TypeScript", "Node", "WebSockets"],
-    href: "#",
-    highlight: "Featured",
+      "Platform for creating, managing, and coordinating autonomous AI agents across tasks and workflows.",
+    tags: ["AI", "Agents", "TypeScript"],
+    period: "2026 — Present",
+    highlight: "In progress",
   },
   {
-    id: "portfolio",
-    title: "Interactive Portfolio",
+    id: "gms-audit",
+    title: "GMS Audit Management",
     description:
-      "Recruiter-focused personal site with motion design, accessible navigation, and project storytelling.",
-    tags: ["Next.js", "CSS", "A11y"],
-    href: "#projects",
+      "CMMI compliance audit system with Next.js, Supabase, AI document analysis, multi-tenant tracking, and OCR-backed ingestion pipelines.",
+    tags: ["Next.js", "TypeScript", "Supabase", "AI"],
+    period: "2025 — Present",
+    highlight: "Client work",
+  },
+  {
+    id: "clash-royale-bot",
+    title: "Clash Royale Bot",
+    description:
+      "Automated bot that uses computer vision and game-state analysis to make real-time gameplay decisions and learn competitive strategies.",
+    tags: ["Python", "Computer Vision", "ML"],
+    href: "https://github.com/gsheppard7/ClashRoyaleBot",
+    period: "2025 — Present",
+  },
+  {
+    id: "firefighter-safety",
+    title: "Firefighter Safety Wearable",
+    description:
+      "ESP32 wearable integrating heart rate, SpO₂, and BLE proximity sensing with real-time display and wireless telemetry for field safety.",
+    tags: ["ESP32", "Embedded", "IoT"],
+    period: "2025 — 2026",
+    highlight: "Grand Challenges",
+  },
+  {
+    id: "baseball-simulator",
+    title: "Baseball Simulator",
+    description:
+      "Simulation and analytics tooling supporting baseball modeling and scenario exploration (Georgia Tech Baseball Analytics).",
+    tags: ["TypeScript", "Sports Analytics"],
+    href: "https://github.com/gsheppard7/BaseballSimulator",
+    period: "2025 — Present",
+  },
+  {
+    id: "personal-portfolio",
+    title: "Personal Portfolio",
+    description:
+      "This site — projects, experience, and resume for recruiters and hiring teams, built with Next.js and deployed on Vercel.",
+    tags: ["Next.js", "React", "TypeScript"],
+    href: "https://github.com/gsheppard7/personal-portfolio",
     highlight: "This site",
   },
   {
-    id: "analytics",
-    title: "Telemetry Dashboard",
+    id: "cnn-pytorch",
+    title: "CNN Image Classification",
     description:
-      "Operational metrics dashboard with custom charts, alerting hooks, and role-based views.",
-    tags: ["React", "D3", "PostgreSQL"],
-    href: "#",
+      "Convolutional neural network in PyTorch trained to classify image categories with a full training and evaluation workflow.",
+    tags: ["Python", "PyTorch", "Deep Learning"],
+    href: "https://github.com/gsheppard7/CNNImageClassificationPyTorch",
+  },
+  {
+    id: "text2pointcloud",
+    title: "Text2PointCloud",
+    description:
+      "Generates a 3D point representation of an object described in natural language — bridging language models and spatial output.",
+    tags: ["Python", "ML", "3D"],
+    href: "https://github.com/gsheppard7/Text2PointCloud",
+  },
+  {
+    id: "moviesstore",
+    title: "Movies Store",
+    description: "Full-stack movie catalog and storefront application with Python backend services.",
+    tags: ["Python", "Web"],
+    href: "https://github.com/gsheppard7/moviesstore",
+  },
+  {
+    id: "rubiks",
+    title: "Rubik's Cube Solver",
+    description: "Program that solves any Rubik's cube configuration using a structured solving algorithm.",
+    tags: ["JavaScript", "Algorithms"],
+    href: "https://github.com/gsheppard7/RubixCubeSolver",
   },
 ];
 
 export const experience: Experience[] = [
   {
-    id: "exp-1",
-    role: "Senior Software Engineer",
-    company: "Tech Company · Product Engineering",
-    period: "2022 — Present",
-    summary: "Led frontend platform work and cross-team delivery for customer-facing products.",
+    id: "guardians-data",
+    role: "Data Engineering Intern",
+    company: "Cleveland Guardians · Sports Science",
+    period: "May 2026 — July 2026",
+    summary:
+      "Built biomechanics and athlete performance pipelines on Databricks for staff-facing analysis and scouting.",
     bullets: [
-      "Owned design-system adoption across 4 product squads, cutting UI inconsistency and review cycles.",
-      "Shipped performance wins (LCP −38%, bundle −22%) via code-splitting and interaction budgeting.",
-      "Partnered with design on accessible patterns; WCAG 2.1 AA audits passed for major releases.",
+      "Migrated production baseball pipelines from Airflow to Databricks (bronze/silver/gold, incremental jobs, serverless).",
+      "Delivered a pinch-hit tendency advance scouting report used in game preparation.",
+      "Integrated vendor REST APIs with auth, pagination, rate limits, normalization, and automated ingestion.",
     ],
   },
   {
-    id: "exp-2",
-    role: "Software Engineer",
-    company: "Startup · Full Stack",
-    period: "2019 — 2022",
-    summary: "Full-stack feature development from prototype through production monitoring.",
+    id: "gms",
+    role: "Independent Software Developer",
+    company: "GMS · Cleveland, OH",
+    period: "May 2025 — Present",
+    summary:
+      "End-to-end ownership of a compliance audit platform for CMMI assessments and document workflows.",
     bullets: [
-      "Built billing and onboarding flows used by thousands of monthly active users.",
-      "Introduced CI quality gates and component tests for critical user journeys.",
-      "Mentored interns and junior engineers on React patterns and code review habits.",
+      "Shipped Next.js + Supabase app with AI document analysis, multi-tenant audit tracking, and automated extraction.",
+      "Designed OCR fallback, row-level security, and REST APIs for scalable document processing.",
     ],
   },
   {
-    id: "exp-3",
-    role: "Engineering Intern",
-    company: "Enterprise · Platform",
-    period: "2018 — 2019",
-    summary: "Internal tools and automation supporting developer productivity.",
+    id: "guardians-ld",
+    role: "Learning & Development Intern",
+    company: "Cleveland Guardians",
+    period: "May 2025 — July 2025",
+    summary: "Internal tools and content systems for L&D serving 200+ employees.",
     bullets: [
-      "Automated release checklist tooling, reducing manual deployment steps.",
-      "Contributed to shared component library documentation and Storybook stories.",
+      "Designed and built a Notion-based internal site for the Learning & Development team.",
+      "Structured navigation and content so non-technical staff could maintain resources independently.",
+    ],
+  },
+  {
+    id: "gt-baseball",
+    role: "Leadership Team · Software & Analytics",
+    company: "GT Baseball Analytics",
+    period: "Jan 2025 — Present",
+    summary:
+      "Software, models, and data infrastructure for Georgia Tech Baseball coaching staff.",
+    bullets: [
+      "Built ingestion and processing pipelines for Trackman game data.",
+      "Developed a defensive positioning platform visualizing player locations across plays.",
     ],
   },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
-    id: "frontend",
-    label: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "CSS / Motion", "Accessibility"],
+    id: "languages",
+    label: "Languages",
+    items: ["Python", "Java", "TypeScript", "JavaScript", "SQL"],
   },
   {
-    id: "backend",
-    label: "Backend & Data",
-    items: ["Node.js", "REST / GraphQL", "PostgreSQL", "Redis"],
+    id: "stack",
+    label: "Technologies",
+    items: [
+      "Next.js",
+      "Supabase",
+      "Databricks",
+      "Apache Airflow",
+      "REST APIs",
+      "Git",
+    ],
   },
   {
-    id: "ops",
-    label: "Delivery",
-    items: ["GitHub Actions", "Docker", "Observability", "Agile / Scrum"],
+    id: "domains",
+    label: "Technical areas",
+    items: [
+      "Data engineering & ETL",
+      "Machine learning",
+      "Computer vision",
+      "Backend development",
+      "Sports analytics",
+    ],
   },
 ];
 

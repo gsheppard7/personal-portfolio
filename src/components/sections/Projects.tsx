@@ -13,7 +13,7 @@ export function Projects() {
       <SectionHeading
         id="projects"
         title="Selected work"
-        subtitle="Projects that show how I think about product, performance, and polish."
+        subtitle="From Guardians data pipelines to GT Baseball tools — open-source repos link to GitHub."
       />
       <div className="projects-grid">
         {projects.map((project, index) => (

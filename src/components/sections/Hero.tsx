@@ -22,6 +22,14 @@ export function Hero() {
             <a className="btn btn-primary" href="#projects">
               See projects
             </a>
+            <a
+              className="btn btn-ghost"
+              href={siteMeta.links.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download resume
+            </a>
             <a className="btn btn-ghost" href="#contact">
               Get in touch
             </a>

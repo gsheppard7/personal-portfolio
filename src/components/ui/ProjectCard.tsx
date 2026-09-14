@@ -10,13 +10,19 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const ref = useReveal<HTMLElement>();
+  const isExternal = Boolean(project.href?.startsWith("http"));
 
   const className = `project-card glass-panel reveal${project.href ? " project-card--link" : ""}`;
 
   const body = (
     <>
       <div className="project-card-top">
-        <h3 className="project-title">{project.title}</h3>
+        <div>
+          <h3 className="project-title">{project.title}</h3>
+          {project.period ? (
+            <p className="project-period">{project.period}</p>
+          ) : null}
+        </div>
         {project.highlight ? (
           <span className="project-badge">{project.highlight}</span>
         ) : null}
@@ -31,7 +37,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       </ul>
       {project.href ? (
         <span className="project-link-hint" aria-hidden="true">
-          View →
+          {isExternal ? "GitHub →" : "View →"}
         </span>
       ) : null}
     </>
@@ -48,6 +54,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           href={project.href}
           className="project-card-anchor"
           aria-label={`${project.title}: ${project.description}`}
+          {...(isExternal
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
         >
           {body}
         </a>

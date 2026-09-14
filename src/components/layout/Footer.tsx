@@ -8,10 +8,28 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container site-footer-inner">
         <p>
-          © {year} {siteMeta.name}. Crafted for recruiters &amp; hiring teams.
+          © {year} {siteMeta.name}. Georgia Institute of Technology.
         </p>
         <p className="site-footer-note">
-          Update copy in <code>src/components/portfolio/content.ts</code>
+          <a href={siteMeta.links.resume} target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+          {" · "}
+          <a
+            href={siteMeta.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          {" · "}
+          <a
+            href={siteMeta.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </p>
       </div>
     </footer>
