@@ -44,6 +44,14 @@
   font-size: 1.05rem;
 }
 
+.hero-about {
+  margin: 0 0 0.75rem;
+  max-width: 52ch;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
 .hero-location {
   margin: 0 0 1.5rem;
   font-family: var(--font-mono);
@@ -69,9 +77,10 @@
 
 .hero-stat-value {
   margin: 0;
-  font-size: 1.65rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .hero-stat-label {

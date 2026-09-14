@@ -36,13 +36,28 @@ export const siteMeta = {
     linkedin: "https://www.linkedin.com/in/gavin-sheppard29/",
     resume: "/Gavin-Sheppard-Resume.pdf",
   },
-  availability: "B.S. Computer Science · Expected May 2029 · GPA 3.77",
+  availability: "Georgia Tech · Class of 2029 · Open to internships & co-ops",
 };
 
+export const heroAbout =
+  "I'm most energized when code sits next to a real problem — turning athlete and game data into something coaches can use, prototyping wearables, or building agents and bots that react to the world in real time.";
+
 export const heroStats = [
-  { label: "GPA", value: "3.77" },
-  { label: "Internships", value: "3" },
-  { label: "Focus", value: "Data · ML · Web" },
+  {
+    value: "Sports analytics",
+    label:
+      "Data engineering and visualization for the Cleveland Guardians and GT Baseball.",
+  },
+  {
+    value: "AI & vision",
+    label:
+      "Agent orchestration, ML pipelines, and computer-vision projects (yes, including game bots).",
+  },
+  {
+    value: "Full-stack & embedded",
+    label:
+      "Next.js apps, Supabase backends, ESP32 wearables — from schema design to the last UI detail.",
+  },
 ];
 
 export const projects: Project[] = [
@@ -101,27 +116,12 @@ export const projects: Project[] = [
     highlight: "This site",
   },
   {
-    id: "cnn-pytorch",
-    title: "CNN Image Classification",
-    description:
-      "Convolutional neural network in PyTorch trained to classify image categories with a full training and evaluation workflow.",
-    tags: ["Python", "PyTorch", "Deep Learning"],
-    href: "https://github.com/gsheppard7/CNNImageClassificationPyTorch",
-  },
-  {
     id: "text2pointcloud",
     title: "Text2PointCloud",
     description:
       "Generates a 3D point representation of an object described in natural language — bridging language models and spatial output.",
     tags: ["Python", "ML", "3D"],
     href: "https://github.com/gsheppard7/Text2PointCloud",
-  },
-  {
-    id: "moviesstore",
-    title: "Movies Store",
-    description: "Full-stack movie catalog and storefront application with Python backend services.",
-    tags: ["Python", "Web"],
-    href: "https://github.com/gsheppard7/moviesstore",
   },
   {
     id: "rubiks",
@@ -147,6 +147,18 @@ export const experience: Experience[] = [
     ],
   },
   {
+    id: "gt-baseball",
+    role: "Leadership Team · Software & Analytics",
+    company: "GT Baseball Analytics",
+    period: "Jan 2025 — Present",
+    summary:
+      "Software, models, and data infrastructure for Georgia Tech Baseball coaching staff.",
+    bullets: [
+      "Built ingestion and processing pipelines for Trackman game data.",
+      "Developed a defensive positioning platform visualizing player locations across plays.",
+    ],
+  },
+  {
     id: "gms",
     role: "Independent Software Developer",
     company: "GMS · Cleveland, OH",
@@ -167,18 +179,6 @@ export const experience: Experience[] = [
     bullets: [
       "Designed and built a Notion-based internal site for the Learning & Development team.",
       "Structured navigation and content so non-technical staff could maintain resources independently.",
-    ],
-  },
-  {
-    id: "gt-baseball",
-    role: "Leadership Team · Software & Analytics",
-    company: "GT Baseball Analytics",
-    period: "Jan 2025 — Present",
-    summary:
-      "Software, models, and data infrastructure for Georgia Tech Baseball coaching staff.",
-    bullets: [
-      "Built ingestion and processing pipelines for Trackman game data.",
-      "Developed a defensive positioning platform visualizing player locations across plays.",
     ],
   },
 ];

@@ -1,6 +1,6 @@
 "use client";
 
-import { heroStats, siteMeta } from "../portfolio/content";
+import { heroAbout, heroStats, siteMeta } from "../portfolio/content";
 import { useReveal } from "../hooks/useReveal";
 import "./hero.css";
 
@@ -17,6 +17,7 @@ export function Hero() {
             <span className="hero-title-sub"> — {siteMeta.role}</span>
           </h1>
           <p className="hero-tagline">{siteMeta.tagline}</p>
+          <p className="hero-about">{heroAbout}</p>
           <p className="hero-location">{siteMeta.location}</p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#projects">
@@ -36,7 +37,7 @@ export function Hero() {
           </div>
         </div>
 
-        <aside className="hero-stats" aria-label="Highlights">
+        <aside className="hero-stats" aria-label="Interests and focus areas">
           {heroStats.map((stat, index) => (
             <StatCard key={stat.label} {...stat} index={index} />
           ))}
