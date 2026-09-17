@@ -36,7 +36,7 @@ export const siteMeta = {
     linkedin: "https://www.linkedin.com/in/gavin-sheppard29/",
     resume: "/Gavin-Sheppard-Resume.pdf",
   },
-  availability: "Georgia Tech · Class of 2029 · Open to internships & co-ops",
+  availability: "Georgia Tech · Open to internships & co-ops",
 };
 
 export const heroAbout =
