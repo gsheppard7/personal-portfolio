@@ -10,11 +10,20 @@ export function Hero() {
   return (
     <section className="hero section" id="top" aria-labelledby="hero-heading">
       <div className="container hero-grid">
-        <div ref={panelRef} className="hero-copy glass-panel reveal">
-          <p className="hero-availability">{siteMeta.availability}</p>
+        <div ref={panelRef} className="hero-copy glass-panel glass-panel--accent reveal">
+          <div className="hero-identity-row">
+            <div className="hero-monogram" aria-hidden="true">
+              <span className="hero-monogram-inner">GS</span>
+            </div>
+            <p className="hero-availability">
+              <span className="hero-live-dot" aria-hidden="true" />
+              {siteMeta.availability}
+            </p>
+          </div>
           <h1 className="hero-title" id="hero-heading">
-            Hi, I&apos;m <span className="gradient-text">{siteMeta.name}</span>
-            <span className="hero-title-sub"> — {siteMeta.role}</span>
+            Hey — I&apos;m{" "}
+            <span className="gradient-text">{siteMeta.name.split(" ")[0]}</span>
+            <span className="hero-title-sub">{siteMeta.role}</span>
           </h1>
           <p className="hero-tagline">{siteMeta.tagline}</p>
           <p className="hero-about">{heroAbout}</p>

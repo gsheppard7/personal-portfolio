@@ -1,17 +1,20 @@
 :root {
-  --bg-deep: #05070d;
-  --bg-panel: rgba(12, 18, 32, 0.72);
-  --bg-panel-solid: #0c1220;
-  --text-primary: #eef4ff;
-  --text-muted: #94a3b8;
-  --accent-cyan: #22d3ee;
-  --accent-violet: #a78bfa;
-  --accent-magenta: #f472b6;
-  --border-glow: rgba(34, 211, 238, 0.35);
+  --bg-deep: #060a12;
+  --bg-panel: rgba(10, 16, 28, 0.78);
+  --bg-panel-solid: #0a101c;
+  --text-primary: #f0f4fc;
+  --text-muted: #8b9cb3;
+  --accent-cyan: #2ee4ff;
+  --accent-violet: #b794ff;
+  --accent-magenta: #ff6eb4;
+  --accent-amber: #fbbf24;
+  --accent-field: #4ade80;
+  --border-glow: rgba(46, 228, 255, 0.38);
   --radius-lg: 1.25rem;
   --radius-md: 0.75rem;
-  --font-display: "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, "Cascadia Code", "SF Mono", monospace;
+  --font-headline: var(--font-syne), "Segoe UI", system-ui, sans-serif;
+  --font-display: var(--font-dm), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "Cascadia Code", monospace;
   --section-gap: clamp(4rem, 10vw, 7rem);
   --content-width: min(1120px, calc(100% - 2.5rem));
   --nav-height: 4.25rem;
@@ -46,9 +49,22 @@ body {
   min-height: 100vh;
   font-family: var(--font-display);
   color: var(--text-primary);
-  background: var(--bg-deep);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(74, 222, 128, 0.07), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 20%, rgba(251, 191, 36, 0.06), transparent 50%),
+    var(--bg-deep);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 a {
@@ -94,9 +110,10 @@ a {
 
 .section-heading {
   margin: 0 0 0.35rem;
+  font-family: var(--font-headline);
   font-size: clamp(1.75rem, 4vw, 2.35rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .section-sub {
@@ -115,16 +132,37 @@ a {
     0 24px 48px rgba(0, 0, 0, 0.35);
 }
 
+.glass-panel--accent {
+  border-color: rgba(251, 191, 36, 0.22);
+  box-shadow:
+    0 0 0 1px rgba(251, 191, 36, 0.06) inset,
+    0 0 48px rgba(46, 228, 255, 0.08),
+    0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
 .gradient-text {
   background: linear-gradient(
-    120deg,
-    var(--accent-cyan),
-    var(--accent-violet) 55%,
-    var(--accent-magenta)
+    115deg,
+    var(--accent-amber) 0%,
+    var(--accent-cyan) 35%,
+    var(--accent-violet) 70%,
+    var(--accent-magenta) 100%
   );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
 }
 
 .btn {

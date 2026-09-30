@@ -13,7 +13,7 @@ export function ExperienceSection() {
       <SectionHeading
         id="experience"
         title="Experience"
-        subtitle="Roles and outcomes pulled from my resume — swap in your real copy in content.ts."
+        subtitle="Internships and teams where I shipped analytics, software, and hardware that people actually use."
       />
       <div className="timeline-list">
         {experience.map((item, index) => (

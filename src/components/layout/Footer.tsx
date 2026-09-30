@@ -10,6 +10,9 @@ export function Footer() {
         <p>
           © {year} {siteMeta.name}. Georgia Institute of Technology.
         </p>
+        <p className="site-footer-tagline">
+          Built with curiosity, caffeine, and too many git branches.
+        </p>
         <p className="site-footer-note">
           <a href={siteMeta.links.resume} target="_blank" rel="noopener noreferrer">
             Resume

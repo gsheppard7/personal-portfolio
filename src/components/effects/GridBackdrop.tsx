@@ -30,7 +30,7 @@ export function GridBackdrop() {
       ctx.clearRect(0, 0, w, h);
 
       const offset = (frame * 0.15) % 40;
-      ctx.strokeStyle = "rgba(34, 211, 238, 0.06)";
+      ctx.strokeStyle = "rgba(46, 228, 255, 0.055)";
       ctx.lineWidth = 1;
 
       for (let x = -40; x < w + 40; x += 40) {
@@ -56,11 +56,22 @@ export function GridBackdrop() {
         h * 0.2,
         Math.max(w, h) * 0.45,
       );
-      gradient.addColorStop(0, `rgba(167, 139, 250, ${0.12 * pulse})`);
-      gradient.addColorStop(0.5, `rgba(34, 211, 238, ${0.06 * pulse})`);
-      gradient.addColorStop(1, "rgba(5, 7, 13, 0)");
+      gradient.addColorStop(0, `rgba(183, 148, 255, ${0.11 * pulse})`);
+      gradient.addColorStop(0.45, `rgba(46, 228, 255, ${0.05 * pulse})`);
+      gradient.addColorStop(1, "rgba(6, 10, 18, 0)");
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, w, h);
+
+      const plateX = w * 0.12;
+      const plateY = h * 0.78;
+      const plateSize = Math.min(w, h) * 0.09;
+      ctx.save();
+      ctx.translate(plateX, plateY);
+      ctx.rotate(Math.PI / 4);
+      ctx.strokeStyle = `rgba(251, 191, 36, ${0.08 + pulse * 0.04})`;
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(-plateSize / 2, -plateSize / 2, plateSize, plateSize);
+      ctx.restore();
 
       frame += 1;
       raf = requestAnimationFrame(draw);
