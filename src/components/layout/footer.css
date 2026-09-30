@@ -9,7 +9,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.site-footer-tagline {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-violet);
+  opacity: 0.9;
 }
 
 .site-footer p {

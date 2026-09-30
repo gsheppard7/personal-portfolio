@@ -6,6 +6,7 @@ import { ExperienceSection } from "../sections/Experience";
 import { Hero } from "../sections/Hero";
 import { Projects } from "../sections/Projects";
 import { Skills } from "../sections/Skills";
+import { PersonalityMarquee } from "../ui/PersonalityMarquee";
 import { Footer } from "./Footer";
 import { Nav } from "./Nav";
 
@@ -18,6 +19,7 @@ export function SiteShell() {
         Skip to projects
       </a>
       <Nav />
+      <PersonalityMarquee />
       <main className="site-main">
         <Hero />
         <Projects />

@@ -16,9 +16,9 @@ export function Contact() {
       <div ref={ref} className="contact-panel glass-panel reveal">
         <div className="contact-copy">
           <p className="section-kicker" id="contact-label">
-            {"// contact"}
+            04 · Say hi
           </p>
-          <h2 className="section-heading">Let&apos;s build what&apos;s next</h2>
+          <h2 className="section-heading">Let&apos;s build something loud</h2>
           <p className="contact-text">
             Recruiters and hiring managers: reach out about internships, co-ops,
             or full-time roles in software engineering, data, or sports analytics.

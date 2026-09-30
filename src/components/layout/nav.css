@@ -29,8 +29,9 @@
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
+  font-family: var(--font-headline);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .site-logo small {
@@ -46,8 +47,25 @@
   width: 2rem;
   height: 2rem;
   border-radius: 0.55rem;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
-  box-shadow: 0 0 18px rgba(34, 211, 238, 0.35);
+  background:
+    linear-gradient(135deg, rgba(251, 191, 36, 0.25), transparent 55%),
+    linear-gradient(225deg, var(--accent-cyan), var(--accent-violet));
+  box-shadow: 0 0 18px rgba(46, 228, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -32deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.07) 3px,
+    rgba(255, 255, 255, 0.07) 4px
+  );
 }
 
 .site-nav-links ul {
