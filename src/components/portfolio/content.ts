@@ -69,6 +69,7 @@ export const projects: Project[] = [
     tags: ["AI", "Agents", "TypeScript"],
     period: "2026 — Present",
     highlight: "In progress",
+    href: "https://github.com/gsheppard7/Hivemind",
   },
   {
     id: "gms-audit",
@@ -78,6 +79,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Supabase", "AI"],
     period: "2025 — Present",
     highlight: "Client work",
+    href: "https://github.com/sportygavin/GMS-audit",
   },
   {
     id: "clash-royale-bot",
@@ -105,15 +107,6 @@ export const projects: Project[] = [
     tags: ["TypeScript", "Sports Analytics"],
     href: "https://github.com/gsheppard7/BaseballSimulator",
     period: "2025 — Present",
-  },
-  {
-    id: "personal-portfolio",
-    title: "Personal Portfolio",
-    description:
-      "This site — projects, experience, and resume for recruiters and hiring teams, built with Next.js and deployed on Vercel.",
-    tags: ["Next.js", "React", "TypeScript"],
-    href: "https://github.com/gsheppard7/personal-portfolio",
-    highlight: "This site",
   },
   {
     id: "text2pointcloud",
